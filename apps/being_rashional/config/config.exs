@@ -30,10 +30,7 @@ use Mix.Config
 #     import_config "#{Mix.env}.exs"
 
 config :being_rashional, BeingRashional.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  database: "being_rashional",
-  username: "tyler",
-  password: "postgres"
+  adapter: Ecto.Adapters.Postgres
 
 config :being_rashional, ecto_repos: [BeingRashional.Repo]
 
