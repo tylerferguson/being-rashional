@@ -36,3 +36,5 @@ config :being_rashional, BeingRashional.Repo,
   password: "postgres"
 
 config :being_rashional, ecto_repos: [BeingRashional.Repo]
+
+import_config "#{Mix.env}.exs"
