@@ -28,3 +28,11 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+
+config :being_rashional, BeingRashional.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "being_rashional",
+  username: "tyler",
+  password: "postgres"
+
+config :being_rashional, ecto_repos: [BeingRashional.Repo]

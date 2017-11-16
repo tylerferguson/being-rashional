@@ -10,6 +10,7 @@ defmodule BeingRashional.Application do
     children = [
       # Starts a worker by calling: BeingRashional.Worker.start_link(arg)
       # {BeingRashional.Worker, arg},
+        {BeingRashional.Repo}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
