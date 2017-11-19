@@ -24,10 +24,14 @@ jobs:
       - run: mix ecto.create
       - run: mix test
   deploy-job:
+    docker:
+        # specify the version here
+      - image: circleci/elixir:1.5.2
+      - image: circleci/postgres:9.6.3
     steps:
       - run:
           name: Run setup script
-          command: bash .circleci/setup-heroku.sh
+          command: bash ~/project/.circleci/setup-heroku.sh
       - add_ssh_keys:
           fingerprints:
             - "0c:86:e7:57:a3:da:0f:56:df:5d:3c:a9:f4:39:78:b6"
